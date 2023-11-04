@@ -43,7 +43,7 @@ const Home = () => {
             <h1>Python code ideas</h1>
           </div>
           <div className="header-subtitle">
-            <h2>What do you want to do? write it below to get an explanation of possible pthon functions and libraries that could help you write code to do this.</h2>
+            <h2>What do you want to do? write it below to get an explanation of possible python functions and libraries that could help you write code to do this.</h2>
           </div>
         </div>
 		<div className="prompt-container">
