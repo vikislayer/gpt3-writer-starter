@@ -10,7 +10,7 @@ const basePromptPrefix = `
     Write me a short list of which functions and libraries in python can help me write code to do the following.
 
     following:
-    `;
+    `
 
 const generateAction = async (req, res) => {
   // Run first prompt
