@@ -6,7 +6,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "Write a list of possible twitter post titles based on the celebrity below.\n\nCelebrity: ";
+const basePromptPrefix = "Write me a short list of which functions and libraries in python can help me write code to do the following.\n\nfollowing: ";
 
 const generateAction = async (req, res) => {
   // Run first prompt
@@ -22,15 +22,16 @@ const generateAction = async (req, res) => {
   const basePromptOutput = baseCompletion.data.choices.pop();
 
   const secondPrompt = 
-  `
-  Generate 3 twitter posts in the style of the celebrity below, based on the title list below.
+    `
+    Write a detailed explanation how the python functions and libraries below can help me write code to do the following in python.
 
-  Celebrity: ${req.body.userInput}
-
-  Title list: ${basePromptOutput.text}
-
-  Blog Post:
-  `
+    following: ${ req.body.userInput }
+    
+    functions and libraries: ${ basePromptOutput.text }
+    
+    detailed explanation:
+    `
+  
 
   const secondPromptCompletion = await openai.createCompletion({
     model: 'text-davinci-003',

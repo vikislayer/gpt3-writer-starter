@@ -40,15 +40,15 @@ const Home = () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Celebrity Twitter post generator</h1>
+            <h1>Python code ideas</h1>
           </div>
           <div className="header-subtitle">
-            <h2>Type the name of a celebrity below to get some possible twitter posts that they were simulated to generate</h2>
+            <h2>What do you want to do? write it below to get an explanation of possible pthon functions and libraries that could help you write code to do this.</h2>
           </div>
         </div>
 		<div className="prompt-container">
           <textarea 
-			placeholder="Celebrity" 
+			placeholder="What to code for?" 
 			className="prompt-box" 
 			value={userInput} 
 			onChange={onUserChangedText}
